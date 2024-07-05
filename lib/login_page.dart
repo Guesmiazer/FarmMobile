@@ -1,8 +1,7 @@
 import 'dart:convert';
 import 'package:azer/api_service.dart';
 import 'package:flutter/material.dart';
-
-// import 'package:azer/home_page.dart';
+ import 'package:azer/home_page.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -27,10 +26,10 @@ class _LoginPageState extends State<LoginPage> {
         print('Login successful. User ID: ${responseBody['id']}');
         print('User Role: ${responseBody['role']}');
 
-        // Navigator.pushReplacement(
-        //   context,
-        //   MaterialPageRoute(builder: (context) => HomePage()),
-        // );
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => HomePage()),
+        );
       } else {
         _showErrorDialog('Erreur de connexion', 'Les coordonnées sont incorrectes. Veuillez réessayer.');
       }
